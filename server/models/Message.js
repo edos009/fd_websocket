@@ -9,6 +9,9 @@ const mongooseSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+}, {
+  timestamps: true,
+  versionKey: false
 });
 
 const Message = mongoose.model("Message", mongooseSchema);
